@@ -1,6 +1,5 @@
 package Controllers;
 
-import Models.Cargo;
 import Models.CentrarColumnas;
 import Models.ColorearLabels;
 import Models.PerfilLaboral;
