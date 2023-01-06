@@ -70,6 +70,7 @@ public class TrabajadorController implements ActionListener, MouseListener, KeyL
         //  Eventos ActionListener
         frmMenu.btnRegistrarTrabajador.addActionListener(this);
         frmMenu.btnActualizarTrabajador.addActionListener(this);
+        frmMenu.btnCancelarTrabajador.addActionListener(this);
         frmMenu.cboFiltrarTrabajadorPor.addActionListener(this);
         frmMenu.JReingresarTrabajador.addActionListener(this);
         frmMenu.JCesarTrabajador.addActionListener(this);
@@ -507,6 +508,11 @@ public class TrabajadorController implements ActionListener, MouseListener, KeyL
             }
         }
 
+        // Evento ActionListener para el boton cancelar
+        if (e.getSource().equals(frmMenu.btnCancelarTrabajador)) {
+            limpiarInputs();
+            enableButtons();
+        }
         //  Evento ActionListener para el comboBox filtro - VISTA ADMINISTRADOR
         if (e.getSource().equals(frmMenu.cboFiltrarTrabajadorPor)) {
             if (frmMenu.cboFiltrarTrabajadorPor.getSelectedItem().equals("Nombre")) {

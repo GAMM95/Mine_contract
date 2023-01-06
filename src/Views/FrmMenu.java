@@ -183,6 +183,7 @@ public class FrmMenu extends javax.swing.JFrame {
         txtBusquedaTrabajador = new gamm_TextField.TextField();
         btnActualizarTrabajador = new gamm_Button.Button();
         btnRegistrarTrabajador = new gamm_Button.Button();
+        btnCancelarTrabajador = new gamm_Button.Button();
         pnlListarTrabajadores = new javax.swing.JPanel();
         roundedPanel13 = new gamm_Panel.RoundedPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -1532,7 +1533,7 @@ public class FrmMenu extends javax.swing.JFrame {
                 .addGroup(roundedPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1438, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtBusquedaTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         roundedPanel12Layout.setVerticalGroup(
             roundedPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1550,6 +1551,9 @@ public class FrmMenu extends javax.swing.JFrame {
         btnRegistrarTrabajador.setBackground(new java.awt.Color(255, 215, 23));
         btnRegistrarTrabajador.setText("REGISTRAR");
 
+        btnCancelarTrabajador.setBackground(new java.awt.Color(255, 215, 23));
+        btnCancelarTrabajador.setText("CANCELAR");
+
         javax.swing.GroupLayout pnlRegistrarTrabajadorLayout = new javax.swing.GroupLayout(pnlRegistrarTrabajador);
         pnlRegistrarTrabajador.setLayout(pnlRegistrarTrabajadorLayout);
         pnlRegistrarTrabajadorLayout.setHorizontalGroup(
@@ -1565,9 +1569,11 @@ public class FrmMenu extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addGroup(pnlRegistrarTrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlRegistrarTrabajadorLayout.createSequentialGroup()
-                                .addComponent(btnRegistrarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41)
-                                .addComponent(btnActualizarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnRegistrarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnActualizarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(btnCancelarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(42, 42, 42))
         );
@@ -1584,7 +1590,8 @@ public class FrmMenu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(pnlRegistrarTrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnActualizarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnRegistrarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnRegistrarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCancelarTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(roundedPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4337,6 +4344,7 @@ public class FrmMenu extends javax.swing.JFrame {
     public gamm_Button.Button btnCancelarBusqueda;
     public gamm_Button.Button btnCancelarCargo;
     public gamm_Button.Button btnCancelarEmpresa;
+    public gamm_Button.Button btnCancelarTrabajador;
     public gamm_Button.Button btnEstadoPerfil;
     public gamm_Button.Button btnHabilitar;
     public gamm_Button.Button btnModificarEmpresa;

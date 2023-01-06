@@ -430,7 +430,8 @@ create procedure usp_actualizar_perfil (
 	in p_sueldo	decimal(8,2),  -- sueldo del trabajador
     in p_fechaCese date, -- fecha de cese de labores del trabajador
 	in p_motivoCese	varchar(60), -- motivo de cese de labores del trabajador
-	in p_idTrabajador int -- codigo del perfil laboral del trabajador
+	in p_idTrabajador int, -- codigo del perfil laboral del trabajador
+    in p_codPerfil int
 )
 begin 
 	-- Actualizar trabajador registrado
@@ -444,7 +445,6 @@ begin
 	where codPerfil = p_codPerfil;
 END$$
 DELIMITER ;
-
 
  -- Procedimiento para suspender trabajador
  begin;
@@ -546,6 +546,30 @@ begin
     values  (p_numLicencia, p_categoria, p_fechaEmision, p_fechaCaducidad, p_idTrabajador);
     commit;
 end$$
+DELIMITER ;
+
+
+begin;
+drop procedure if exists usp_actualizar_licencia$$
+delimiter $$
+create procedure usp_actualizar_licencia (
+ in p_numLicencia char (9),
+ in p_categoria varchar (5),
+ in p_fechaEmision	date,				
+ in p_fechaCaducidad date,		
+ in p_idTrabajador int, -- codigo del perfil laboral del trabajador
+ in p_codLicencia int
+)
+begin 
+	-- Actualizar trabajador registrado
+	update licencia set 
+		numLicencia = p_numLicencia, 
+		categoria = p_categoria,
+		fechaEmision = p_fechaEmision,	
+		fechaCaducidad = p_fechaCaducidad,
+		idTrabajador = p_idTrabajador
+	where codLicencia = p_codLicencia;
+END$$
 DELIMITER ;
 
 -- view para listar licencias
@@ -922,7 +946,7 @@ inner join trabajador t on t.idTrabajador = r.idTrabajador
 inner join vehiculo ve on ve.codVehiculo = r.codVehiculo
 order by fecha desc;
 
-create view listar_vales as
+create view mostrar_vales as
 select fecha, concat(nombreGuardia, ' - ',nombreTurno) as Guardia, codVale, concat(apePaterno, ' ' , apeMaterno, ' ', nombres) as Trabajador, idVehiculo, horometro, galones from vale v
 inner join reparto r on r.codReparto = v.codReparto
 inner join guardia g on g.codGuardia = r.codGuardia

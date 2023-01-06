@@ -1513,9 +1513,11 @@
                                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <Component id="btnRegistrarTrabajador" min="-2" pref="152" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                                  <Component id="btnActualizarTrabajador" min="-2" pref="144" max="-2" attributes="0"/>
+                                                  <Component id="btnRegistrarTrabajador" min="-2" pref="125" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="btnActualizarTrabajador" min="-2" pref="117" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                                  <Component id="btnCancelarTrabajador" min="-2" pref="144" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -1540,6 +1542,7 @@
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="btnActualizarTrabajador" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               <Component id="btnRegistrarTrabajador" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                              <Component id="btnCancelarTrabajador" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
@@ -2545,7 +2548,7 @@
                                           <Component id="jScrollPane2" alignment="0" min="-2" pref="1438" max="-2" attributes="0"/>
                                           <Component id="txtBusquedaTrabajador" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2678,6 +2681,17 @@
                               <Color blue="17" green="d7" red="ff" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="REGISTRAR"/>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="gamm_Button.Button" name="btnCancelarTrabajador">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="17" green="d7" red="ff" type="rgb"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="CANCELAR"/>
                           </Properties>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
