@@ -406,6 +406,35 @@ public class TrabajadorDAO extends Conexion {
             }
         }
     }
+    //metodo para cargar datos de trabajadores en el selector de gtrabajadores Guardia
+    public void listarTrabajadorGuardiaDialog(DefaultTableModel modelo) {
+        cn = getConexion();
+        int columnas;
+        String sql = "select * from listar_trabajadorGuardia_dialog";
+        try {
+            ps = cn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            rsmd = rs.getMetaData();
+            columnas = rsmd.getColumnCount();
+            while (rs.next()) {
+                Object[] fila = new Object[columnas];
+                for (int i = 0; i < columnas; i++) {
+                    fila[i] = rs.getObject(i + 1);
+                }
+                modelo.addRow(fila);
+            }
+        } catch (Exception ex) {
+            System.out.println("ERROR DAO: listarTrabajadoresDialog... " + ex.getMessage());
+        } finally {
+            try {
+                ps.close();
+                rs.close();
+                cn.close();
+            } catch (SQLException ex) {
+                System.out.println("Error SQLException: listarTrabajadoresDialog..." + ex.getMessage());
+            }
+        }
+    }
 
     //  Metodo para filtrar busqueda de nombres de trabajadores en el Dialog Selector de trabajadores
     public void filtrarBusquedaSelector(String nombre, DefaultTableModel model) {

@@ -251,10 +251,10 @@ public class MenuController implements MouseListener, ActionListener {
                 dst.dispose(); // cerrar dialog
             }
         } else if (e.getSource().equals(frmMenu.btnSeleccionarTrabajadorReparto)) {
-            DSelectorTrabajador dst = new DSelectorTrabajador(); // instancia del dialog
-            dst.setVisible(true); // abrir dialog selector
-            tra = dst.trabajadorSelected;
-            ca = dst.cargoSelected;
+            DSelectorTrabajadorGuardia dstg = new DSelectorTrabajadorGuardia(); // instancia del dialog
+            dstg.setVisible(true); // abrir dialog selector
+            tra = dstg.trabajadorSelected;
+            ca = dstg.cargoSelected;
             try {
                 //  Seteo de datos
                 frmMenu.txtIdTrabajadorReparto.setText(String.valueOf(tra.getIdTrabajador()));
@@ -267,7 +267,7 @@ public class MenuController implements MouseListener, ActionListener {
                 frmMenu.txtIdTrabajadorReparto.setText("");
                 frmMenu.txtTrabajadorAsignadoReparto.setText("");
                 frmMenu.txtCargoSeleccionadoReparto.setText("");
-                dst.dispose(); // cerrar dialog
+                dstg.dispose(); // cerrar dialog
             }
         }
         //  Evento ActionListener para abrir el selector de guardias

@@ -37,7 +37,7 @@ public class DSelectorTrabajadorGuardia extends javax.swing.JDialog {
         tblTrabajadores.getTableHeader().setBackground(Color.decode("#243b55"));
         tblTrabajadores.getTableHeader().setForeground(Color.decode("#FFFFFF"));
         tblTrabajadores.setDefaultRenderer(Object.class, new CentrarColumnas());
-        traDAO.listarTrabajadoresDialog(model);
+        traDAO.listarTrabajadorGuardiaDialog(model);
     }
 
     @SuppressWarnings("unchecked")
